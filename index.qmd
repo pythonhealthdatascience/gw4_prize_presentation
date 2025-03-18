@@ -1,0 +1,87 @@
+---
+#title: "Improving Reproducibility in Open Healthcare Simulation 🖥️"
+#author:
+#  - name: "Amy Heather"
+#    url: https://github.com/amyheather
+#    orcid: 0000-0002-6596-3479
+#    affiliation: University of Exeter
+format: 
+  revealjs:
+    theme: ["styles.scss"]
+    # slide-number: c/t
+    preview-links: true
+    # embed-resources: true
+    # transition: fade
+    height: 800
+    width: 1250
+    logo: images/stars_logo_blue.png
+    preload-iframes: true
+    revealjs-plugins:
+     - fullscreen
+---
+
+# Improving Reproducibility in Open Healthcare Simulation
+
+<!-- ## Addressing Barriers and Promoting Best Practices -->
+
+<hr>
+
+<h3>Amy Heather <a href="https://orcid.org/0000-0002-6596-3479" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:32px; height:32px; margin-left:15px; margin-right:6px; vertical-align:middle;"></a>0000-0002-6596-3479</h3>
+
+<h3>University of Exeter</h3>
+
+<br>
+
+Part of the "STARS" project:
+
+![](images/stars_banner.png)
+<!--![](images/stars_logo_blue_text.png)
+![](images/exeter.png)-->
+
+## Discrete event simulation
+
+<p align="center">
+  <img src="images/simple_des.gif"/>
+</p>
+
+<div style="text-align: center; font-size: 0.6em">
+Animation created using web app developed by <strong>Sammi Rosser</strong> <a href="https://orcid.org/0000-0002-9552-8988" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:16px; height:16px; margin-left:6px; margin-right:6px; vertical-align:middle;"></a>0000-0002-9552-8988
+<br>
+Available at <img src="images/GitHub_Invertocat_Dark.png" alt="GitHub" style="width:16px; height:16px; margin-left:6px; vertical-align:middle;"> [hsma-programme/Teaching_DES_Concepts_Streamlit](https://github.com/hsma-programme/Teaching_DES_Concepts_Streamlit) (2024) (MIT Licence).
+</div>
+
+<!-- Notes:
+
+* Project focused on discrete event simulation
+* Explain how it works
+* Python + R
+
+-->
+
+## Sharing simulation models
+
+<!-- Notes:
+
+- X% share models
+- Just sharing doesn't mean others can x y z
+- X% etc.
+- Reproducibility definition
+- To do so, attempt to reproduce some
+
+-->
+
+## {#protocol fullscreen=true}
+
+<p align="center">
+  <img src="images/zenodo.png"/>
+</p>
+
+## {#summary-website fullscreen=true}
+
+<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary/"></iframe> 
+
+## {#preprint fullscreen=true}
+
+<p align="center">
+  <img src="images/preprint.png"/>
+</p>
