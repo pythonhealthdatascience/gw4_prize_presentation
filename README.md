@@ -4,7 +4,34 @@
 
 Amy Heather's presentation for the GW4 Open Research Prize 2024/25 (Improving Quality category).
 
+View at: https://pythonhealthdatascience.github.io/gw4_prize_presentation/
+
 <br>
+
+## 🛠️ Viewing slides locally
+
+Clone the repository:
+
+```
+git clone https://github.com/pythonhealthdatascience/gw4_prize_presentation
+cd gw4_prize_presentation
+```
+
+Set-up the environment:
+
+```
+conda env create --file environment.yaml
+conda activate gw4-prize-presentation
+```
+
+Render the presentation:
+
+```
+quarto render index.qmd
+```
+
+A `requirements.txt` file is also provided (as required by the GitHub action), which can alternatively be used to set up the development environment with virtualenv, but it will not get the same Python version (the specific version used is listed in the `environment.yaml`).
+
 <br>
 
 ## 📜 Licence
@@ -15,7 +42,6 @@ This presentation is licensed under a [Creative Commons Attribution 4.0 Internat
 [![Licence: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 <br>
-<br>
 
 ## 📝 Citation
 
@@ -23,7 +49,6 @@ If you wish to cite this presentation, please refer to the `CITATION.cff`. As an
 
 > Heather, A. (2025). Improving Reproducibility in Open Healthcare Simulation. Presentation for the GW4 Open Research Prize 2024/25 Improving Quality. https://github.com/pythonhealthdatascience/gw4_prize_presentation.
 
-<br>
 <br>
 
 ## 💰 Funding
