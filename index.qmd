@@ -1,42 +1,39 @@
 ---
-#title: "Improving Reproducibility in Open Healthcare Simulation 🖥️"
-#author:
-#  - name: "Amy Heather"
-#    url: https://github.com/amyheather
-#    orcid: 0000-0002-6596-3479
-#    affiliation: University of Exeter
 format: 
   revealjs:
     theme: ["styles.scss"]
-    # slide-number: c/t
+    footer: "<https://github.com/pythonhealthdatascience/gw4_prize_presentation>"
     preview-links: true
-    # embed-resources: true
-    # transition: fade
     height: 800
     width: 1250
-    logo: images/stars_logo_blue.png
     preload-iframes: true
+    controls: true
+    controls-layout: bottom-right
     revealjs-plugins:
      - fullscreen
 ---
 
 # Improving Reproducibility in Open Healthcare Simulation
 
-<!-- ## Addressing Barriers and Promoting Best Practices -->
-
 <hr>
 
-<h3>Amy Heather <a href="https://orcid.org/0000-0002-6596-3479" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:32px; height:32px; margin-left:15px; margin-right:6px; vertical-align:middle;"></a>0000-0002-6596-3479</h3>
+:::: {.columns}
 
-<h3>University of Exeter</h3>
-
+::: {.column width="75%"}
 <br>
-
+<h3>Amy Heather <a href="https://orcid.org/0000-0002-6596-3479" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:32px; height:32px; margin-left:15px; margin-right:6px; vertical-align:middle;"></a>0000-0002-6596-3479</h3>
+<br>
+<br>
 Part of the "STARS" project:
+:::
+
+::: {.column width="25%"}
+![](images/exeter.png)
+:::
+
+::::
 
 ![](images/stars_banner.png)
-<!--![](images/stars_logo_blue_text.png)
-![](images/exeter.png)-->
 
 ## Discrete event simulation
 
@@ -60,28 +57,260 @@ Available at <img src="images/GitHub_Invertocat_Dark.png" alt="GitHub" style="wi
 
 ## Sharing simulation models
 
-<!-- Notes:
+Nine out of ten healthcare DES publications do not share the code for their model. ^[Monks, T., & Harper, A. (2023). Computer model and code sharing practices in healthcare discrete-event simulation: a systematic scoping review. Journal of Simulation, 0(0), 1-16. [10.1080/17477778.2023.2260772](https://
+doi.org/10.1080/17477778.2023.2260772)]
 
-- X% share models
-- Just sharing doesn't mean others can x y z
-- X% etc.
-- Reproducibility definition
-- To do so, attempt to reproduce some
+. . .
+
+Models that are shared may not be reproducible. <!-- Making code open does not mean it is reproducible -->
+
+. . .
+
+<br>
+
+**Reproducibility**: Generating reported results using the provided code and data.
+
+:::: {.columns style='display: flex;'}
+
+::: {.column width='40%'}
+
+```{.python}
+# Simulation code...
+# etc.
+
+# Plotting code...
+fig = px.line(
+    df, 
+    x='Number of Nurses', 
+    y='Mean Wait Time (min)', 
+    color='Inter-arrival Time',
+    markers=True,
+    color_discrete_sequence=['#0000FF', '#FFA500', '#FF0000']
+)
+
+fig.update_layout(
+    title='Impact of Nursing Staff on Patient Wait Times',
+    xaxis_title='Number of Nurses',
+...
+```
+
+:::
+
+::: {.column width='10%' style='display: flex; align-items: center;'}
+
+![](images/thin-long-arrow-right-icon.png)
+
+:::
+
+::: {.column width='50%'}
+
+```{python}
+import plotly.express as px
+import pandas as pd
+import numpy as np
+
+# Create sample simulation data
+nurses = np.tile([1, 2, 3, 4, 5, 6], 3)
+inter_arrival_times = np.repeat(['5 min', '10 min', '15 min'], 6)
+wait_times = [
+    # 5 min inter-arrival time
+    120, 70, 50, 40, 35, 33,  
+    # 10 min inter-arrival time
+    80, 45, 30, 22, 18, 16,   
+    # 15 min inter-arrival time
+    40, 22, 15, 10, 8, 7      
+]
+
+# Create dataframe
+df = pd.DataFrame({
+    'nurses': nurses,
+    'iat': inter_arrival_times,
+    'mean_wait': wait_times
+})
+
+# Create line chart with multiple lines
+fig = px.line(
+    df, 
+    x='nurses', 
+    y='mean_wait', 
+    color='iat',
+    markers=True,
+    color_discrete_sequence=['#0000FF', '#FFA500', '#FF0000'],
+    height=400,
+    width=600
+)
+
+# Customize layout
+fig.update_layout(
+    title='Impact of Nursing Staff on Patient Wait Times',
+    xaxis_title='Number of Nurses',
+    yaxis_title='Mean Wait Time (minutes)',
+    legend_title='Inter-arrival Time'
+)
+
+fig.show()
+```
+
+:::
+
+::::
+
+## Why does reproducibility matter?
+
+<!--
+
+* re run and verify findings
+* support model reuse
+* maintaing trust in outputs
+* others build on prior work
+* researcher revist and build on own analyses
+
+Issues could be missing code, lost parameters, changes in software behaviour
+troubleshooting time consuming and maybe impossible if info lost
+
+Common barrier: preception that requires advanced skills and time to make reproducible
+
+**Research aim:** Generate a set of actionable recommendations to improve reproducibility of healthcare simulation models.
 
 -->
 
-## {#protocol fullscreen=true}
+## Protocol
+
+<p align="center">
+  <img src="images/stars_wp1_workflow.png"/>
+</p>
+
+<!-- Notes
+
+To do this, attempted to reproduce eight published DES studies
+python and R
+mix complexities locations focuses etc
+
+Barriers and facilitators experienced from those attempts
+As well as results from evaluating the articles against reporting guidelines and code against eg. journal badge requiremetns stars
+
+to form recommendations
+-->
+
+## Pre-registration
+
+::: {.scroll-container style="overflow-y: scroll; height: 700px;"}
 
 <p align="center">
   <img src="images/zenodo.png"/>
 </p>
 
+:::
+
+<!-- Notes:
+
+Shared link with study authors
+
+Others can use and benefit from it - X number of downloads
+
+And know that is good - how we wrote ours, it was very useful, the ones that shared full protocols
+
+-->
+
+## GitHub template
+
+::: {.scroll-container style="overflow-y: scroll; height: 700px;"}
+
+<p align="center">
+  <img src="images/github_template.png"/>
+</p>
+
+:::
+
+<!-- Notes:
+
+When the papers used had licence that allows reuse of paper artefacts, could show side by side
+
+-->
+
+## GitHub website for each study
+
+Options (reproduced + have side by side):
+
+https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reproduction_report.html
+
+https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reproduction_report.html
+
+https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_report.html
+
+<!-- Show:
+
+SUMMARY - compare figure, compare table, mention that it was with consensus subjective decision allowing for some variation
+
+LOGBOOK
+
+-->
+
 ## {#summary-website fullscreen=true}
 
-<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary/"></iframe> 
+<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary/pages/reproduction.html"></iframe> 
+
+<!-- Show:
+
+INTERACTIVE FIGURE - with timings
+
+GitHub repo homepage - README - all the items from publication
+or just the example of non interactuve publication figure
+
+the reflections from reproductions page
+-->
+
+## Recommendations
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+![](images/reproduction_wheel.png)
+
+:::
+
+::: {.column width='50%'}
+
+![](images/troubleshooting_wheel.png)
+
+:::
+
+::::
+
+<!--
+
+Touching on some of the resutls
+Highlight some of the key thigns
+
+mention using FOSS to make diagrams, SVG
+
+and the Improving Quality aims and how the work itself is very relevant
+-->
 
 ## {#preprint fullscreen=true}
 
 <p align="center">
   <img src="images/preprint.png"/>
 </p>
+
+## Current / future work
+
+<!-- 
+
+STARS logo again? Or maybe just focus on stuff...
+
+-->
+
+
+## Thanks acknowledgements
+
+<!-- 
+Logos of all related companies in bid
+
+This project is supported by the Medical Research Council [grant number MR/Z503915/1].
+
+Shout outs to everyone team
+
+Also to authors of papers used in this study for sharing their work openly, facilliating the work
+--->

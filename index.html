@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/tabby.min.js"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
@@ -27,6 +27,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-12582a71798d3b73c65418208734ce29.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -120,6 +185,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -129,18 +197,18 @@
 <section>
 <section id="improving-reproducibility-in-open-healthcare-simulation" class="title-slide slide level1 center">
 <h1>Improving Reproducibility in Open Healthcare Simulation</h1>
-<!-- ## Addressing Barriers and Promoting Best Practices -->
 <hr>
+<div class="columns">
+<div class="column" style="width:75%;">
+<br>
 <h3>
 Amy Heather <a href="https://orcid.org/0000-0002-6596-3479" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:32px; height:32px; margin-left:15px; margin-right:6px; vertical-align:middle;"></a>0000-0002-6596-3479
 </h3>
-<h3>
-University of Exeter
-</h3>
-<p><br></p>
-<p>Part of the “STARS” project:</p>
-<p><img data-src="images/stars_banner.png"> <!--![](images/stars_logo_blue_text.png)
-![](images/exeter.png)--></p>
+<p><br> <br> Part of the “STARS” project:</p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="images/exeter.png"></p>
+</div></div>
+<p><img data-src="images/stars_banner.png"></p>
 </section>
 <section id="discrete-event-simulation" class="slide level2">
 <h2>Discrete event simulation</h2>
@@ -160,38 +228,202 @@ University of Exeter
 </section>
 <section id="sharing-simulation-models" class="slide level2">
 <h2>Sharing simulation models</h2>
-<p>Explain</p>
+<p>Nine out of ten healthcare DES publications do not share the code for their model. <sup>1</sup></p>
+<div class="fragment">
+<p>Models that are shared may not be reproducible. <!-- Making code open does not mean it is reproducible --></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<p><strong>Reproducibility</strong>: Generating reported results using the provided code and data.</p>
+<div class="columns" style="display: flex;">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="co"># Simulation code...</span></span>
+<span id="cb1-2"><a href=""></a><span class="co"># etc.</span></span>
+<span id="cb1-3"><a href=""></a></span>
+<span id="cb1-4"><a href=""></a><span class="co"># Plotting code...</span></span>
+<span id="cb1-5"><a href=""></a>fig <span class="op">=</span> px.line(</span>
+<span id="cb1-6"><a href=""></a>    df, </span>
+<span id="cb1-7"><a href=""></a>    x<span class="op">=</span><span class="st">'Number of Nurses'</span>, </span>
+<span id="cb1-8"><a href=""></a>    y<span class="op">=</span><span class="st">'Mean Wait Time (min)'</span>, </span>
+<span id="cb1-9"><a href=""></a>    color<span class="op">=</span><span class="st">'Inter-arrival Time'</span>,</span>
+<span id="cb1-10"><a href=""></a>    markers<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-11"><a href=""></a>    color_discrete_sequence<span class="op">=</span>[<span class="st">'#0000FF'</span>, <span class="st">'#FFA500'</span>, <span class="st">'#FF0000'</span>]</span>
+<span id="cb1-12"><a href=""></a>)</span>
+<span id="cb1-13"><a href=""></a></span>
+<span id="cb1-14"><a href=""></a>fig.update_layout(</span>
+<span id="cb1-15"><a href=""></a>    title<span class="op">=</span><span class="st">'Impact of Nursing Staff on Patient Wait Times'</span>,</span>
+<span id="cb1-16"><a href=""></a>    xaxis_title<span class="op">=</span><span class="st">'Number of Nurses'</span>,</span>
+<span id="cb1-17"><a href=""></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="display: flex; align-items: center;">
+<p><img data-src="images/thin-long-arrow-right-icon.png"></p>
+</div><div class="column" style="width:50%;">
+<div id="e5e6fb99" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        </script>
+        <script type="module">import "https://cdn.plot.ly/plotly-3.0.1.min"</script>
+        
+</div>
+<div class="cell-output cell-output-display">
+<div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>                <div id="335c0986-9a52-44eb-8355-017407beb728" class="plotly-graph-div" style="height:400px; width:600px;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("335c0986-9a52-44eb-8355-017407beb728")) {                    Plotly.newPlot(                        "335c0986-9a52-44eb-8355-017407beb728",                        [{"hovertemplate":"iat=5 min\u003cbr\u003enurses=%{x}\u003cbr\u003emean_wait=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"5 min","line":{"color":"#0000FF","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"5 min","orientation":"v","showlegend":true,"x":{"dtype":"i1","bdata":"AQIDBAUG"},"xaxis":"x","y":{"dtype":"i1","bdata":"eEYyKCMh"},"yaxis":"y","type":"scatter"},{"hovertemplate":"iat=10 min\u003cbr\u003enurses=%{x}\u003cbr\u003emean_wait=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"10 min","line":{"color":"#FFA500","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"10 min","orientation":"v","showlegend":true,"x":{"dtype":"i1","bdata":"AQIDBAUG"},"xaxis":"x","y":{"dtype":"i1","bdata":"UC0eFhIQ"},"yaxis":"y","type":"scatter"},{"hovertemplate":"iat=15 min\u003cbr\u003enurses=%{x}\u003cbr\u003emean_wait=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"15 min","line":{"color":"#FF0000","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines+markers","name":"15 min","orientation":"v","showlegend":true,"x":{"dtype":"i1","bdata":"AQIDBAUG"},"xaxis":"x","y":{"dtype":"i1","bdata":"KBYPCggH"},"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Number of Nurses"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Mean Wait Time (minutes)"}},"legend":{"title":{"text":"Inter-arrival Time"},"tracegroupgap":0},"height":400,"width":600,"title":{"text":"Impact of Nursing Staff on Patient Wait Times"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('335c0986-9a52-44eb-8355-017407beb728');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div>
+</div>
+</div>
+</div></div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Monks, T., &amp; Harper, A. (2023). Computer model and code sharing practices in healthcare discrete-event simulation: a systematic scoping review. Journal of Simulation, 0(0), 1-16. <a href="https://%20doi.org/10.1080/17477778.2023.2260772">10.1080/17477778.2023.2260772</a></p></li></ol></aside></section>
+<section id="why-does-reproducibility-matter" class="slide level2">
+<h2>Why does reproducibility matter?</h2>
 <ul>
-<li>X% share models</li>
-<li>Just sharing doesn’t mean others can x y z</li>
-<li>X% etc.</li>
-<li>Reproducibility definition</li>
-<li>To do so, attempt to reproduce some</li>
+<li>re run and verify findings</li>
+<li>support model reuse</li>
+<li>maintaing trust in outputs</li>
+<li>others build on prior work</li>
+<li>researcher revist and build on own analyses</li>
 </ul>
+<p>Issues could be missing code, lost parameters, changes in software behaviour troubleshooting time consuming and maybe impossible if info lost</p>
+<p>Common barrier: preception that requires advanced skills and time to make reproducible</p>
+<p><strong>Research aim:</strong> Generate a set of actionable recommendations to improve reproducibility of healthcare simulation models.</p>
 </section>
-<section id="protocol" class="slide level2" data-fullscreen="true">
-<h2></h2>
+<section id="protocol" class="slide level2">
+<h2>Protocol</h2>
+<!-- REMOVE WHITE SPACE FROM BOTTOM OF DIAGRAM -->
+<p align="center">
+<img src="images/stars_wp1_workflow.png">
+</p>
+<!-- Notes
+
+To do this, attempted to reproduce eight published DES studies
+python and R
+mix complexities locations focuses etc
+
+Barriers and facilitators experienced from those attempts
+As well as results from evaluating the articles against reporting guidelines and code against eg. journal badge requiremetns stars
+
+to form recommendations
+-->
+</section>
+<section id="pre-registration" class="slide level2">
+<h2>Pre-registration</h2>
+<div class="scroll-container" style="overflow-y: scroll; height: 700px;">
 <p align="center">
 <img src="images/zenodo.png">
 </p>
+</div>
+<!-- Notes:
+
+Shared link with study authors
+
+Others can use and benefit from it - X number of downloads
+
+And know that is good - how we wrote ours, it was very useful, the ones that shared full protocols
+
+-->
+</section>
+<section id="github-template" class="slide level2">
+<h2>GitHub template</h2>
+<div class="scroll-container" style="overflow-y: scroll; height: 700px;">
+<p align="center">
+<img src="images/github_template.png">
+</p>
+</div>
+<!-- Notes:
+
+When the papers used had licence that allows reuse of paper artefacts, could show side by side
+
+-->
+</section>
+<section id="github-website-for-each-study" class="slide level2">
+<h2>GitHub website for each study</h2>
+<p>Options (reproduced + have side by side):</p>
+<p>https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reproduction_report.html</p>
+<p>https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reproduction_report.html</p>
+<p>https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_report.html</p>
+<!-- Show:
+
+SUMMARY - compare figure, compare table, mention that it was with consensus subjective decision allowing for some variation
+
+LOGBOOK
+
+-->
 </section>
 <section id="summary-website" class="slide level2" data-fullscreen="true">
 <h2></h2>
-<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary/">
+<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary/pages/reproduction.html">
 </iframe>
+<!-- Show:
+
+INTERACTIVE FIGURE - with timings
+
+GitHub repo homepage - README - all the items from publication
+
+-->
+</section>
+<section id="recommendations" class="slide level2">
+<h2>Recommendations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/reproduction_wheel.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/troubleshooting_wheel.png"></p>
+</div></div>
+<!--
+
+Touching on some of the resutls
+Highlight some of the key thigns
+
+mention using FOSS to make diagrams, SVG
+
+and the Improving Quality aims and how the work itself is very relevant
+-->
 </section>
 <section id="preprint" class="slide level2" data-fullscreen="true">
 <h2></h2>
 <p align="center">
 <img src="images/preprint.png">
 </p>
+</section>
+<section id="future-stuffff" class="slide level2">
+<h2>Future stuffff</h2>
+</section>
+<section id="thanks-acknowledgements" class="slide level2">
+<h2>Thanks acknowledgements</h2>
+<p>Logos of all related companies in bid</p>
+<p>This project is supported by the Medical Research Council [grant number MR/Z503915/1].</p>
+<p>Shout outs to everyone team</p>
 
 </section></section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="images/stars_logo_blue.png" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p><a href="https://github.com/pythonhealthdatascience/gw4_prize_presentation" class="uri">https://github.com/pythonhealthdatascience/gw4_prize_presentation</a></p>
 </div>
 </div></div>
 
@@ -217,7 +449,7 @@ University of Exeter
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -228,14 +460,14 @@ University of Exeter
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
         controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
+        controlsLayout: 'bottom-right',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
