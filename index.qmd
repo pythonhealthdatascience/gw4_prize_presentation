@@ -21,7 +21,7 @@ format:
 
 ::: {.column width="75%"}
 <br>
-<h3>Amy Heather <a href="https://orcid.org/0000-0002-6596-3479" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:32px; height:32px; margin-left:15px; margin-right:6px; vertical-align:middle;"></a>0000-0002-6596-3479</h3>
+<h3>Amy Heather <a href="https://orcid.org/0000-0002-6596-3479" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:32px; margin-left:15px; margin-right:6px; vertical-align:middle;"></a>0000-0002-6596-3479</h3>
 <br>
 <br>
 Part of the "STARS" project:
@@ -42,7 +42,7 @@ Part of the "STARS" project:
 </p>
 
 <div style="text-align: center; font-size: 0.6em">
-Animation created using web app developed by <strong>Sammi Rosser</strong> <a href="https://orcid.org/0000-0002-9552-8988" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:16px; height:16px; margin-left:6px; margin-right:6px; vertical-align:middle;"></a>0000-0002-9552-8988
+Animation created using web app developed by <strong>Sammi Rosser</strong> <a href="https://orcid.org/0000-0002-9552-8988" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:16px; margin-left:6px; margin-right:6px; vertical-align:middle;"></a>0000-0002-9552-8988
 <br>
 Available at <img src="images/GitHub_Invertocat_Dark.png" alt="GitHub" style="width:16px; height:16px; margin-left:6px; vertical-align:middle;"> [hsma-programme/Teaching_DES_Concepts_Streamlit](https://github.com/hsma-programme/Teaching_DES_Concepts_Streamlit) (2024) (MIT Licence).
 </div>
@@ -422,53 +422,80 @@ Developing reproducible template models: I am currently creating template DES mo
 
 ::: {.column width='20%'}
 
-**Re-runnable**
+::: {.callout-warning icon="false"}
+
+## Re-runnable
 
 Code runs
+<br><br><br>&nbsp;
+
+:::
 
 :::
 
 ::: {.column width='20%'}
 
-**Repeatable**
+::: {.callout-warning icon="false"}
+
+## Repeatable
 
 Code can produce the same results more than once
+<br>&nbsp;
+
+:::
 
 :::
 
 ::: {.column width='20%'}
 
-**Reproducible**
+::: {.callout-warning icon="false"}
+
+## Reproducible
 
 Running code regenerates the published results
+<br>&nbsp;
 
-<br>
+:::
 
-This work
+<p align="center">
+  ↓<br>
+  This work
+</p>
 
 :::
 
 ::: {.column width='20%'}
 
-**Reusable**
+::: {.callout-warning icon="false"}
+
+## Reusable
 
 Code can be adapted and used in new contexts
+<br>&nbsp;
 
-<br>
+:::
 
-STARS ^[Monks, T., Harper, A., & Mustafee, N. (2024). Towards sharing tools and artefacts for reusable simulations in healthcare. Journal of Simulation, 1–20. [10.1080/17477778.2024.2347882](https://doi.org/10.1080/17477778.2024.2347882)]
+<p align="center">
+  ↓<br>
+  STARS ^[Monks, T., Harper, A., & Mustafee, N. (2024). Towards sharing tools and artefacts for reusable simulations in healthcare. Journal of Simulation, 1–20. [10.1080/17477778.2024.2347882](https://doi.org/10.1080/17477778.2024.2347882)]
+</p>
 
 :::
 
 ::: {.column width='20%'}
 
-**Replicable**
+::: {.callout-warning icon="false"}
+
+## Replicable
 
 New code based on described methods produces consistent results
 
-<br>
+:::
 
-STRESS ^[Monks, T., Currie, C., Onggo, B., et al. (2019). Strengthening the reporting of empirical simulation studies: Introducing the STRESS guidelines. Journal of Simulation, 13(1), 55–67. [10.1080/17477778.2018.1442155](https://doi.org/10.1080/17477778.2018.1442155)]
+<p align="center">
+  ↓<br>
+  STRESS ^[Monks, T., Currie, C., Onggo, B., et al. (2019). Strengthening the reporting of empirical simulation studies: Introducing the STRESS guidelines. Journal of Simulation, 13(1), 55–67. [10.1080/17477778.2018.1442155](https://doi.org/10.1080/17477778.2018.1442155)]
+</p>
 
 :::
 
@@ -492,19 +519,36 @@ STRESS ^[Monks, T., Currie, C., Onggo, B., et al. (2019). Strengthening the repo
 
 ## Acknowledgements
 
-Thanks to **Tom Monks**, **Alison Harper**, **Nav Mustafee**, and **Andy Mayne**, for their supervision, support, and involvement.
+:::: {.columns}
+
+::: {.column width='50%'}
+
+Thanks for their supervision, support, and involvement to:
+
+* **Tom Monks** <a href="https://orcid.org/0000-0003-2631-4481" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="height:30px; margin-left:15px; margin-right:6px; margin-top:-5px; margin-bottom:-5px; vertical-align:middle;"></a>0000-0003-2631-4481</h3>
+* **Alison Harper** <a href="https://orcid.org/0000-0001-5274-5037" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="height:30px; margin-left:15px; margin-right:6px; margin-top:-5px; margin-bottom:-5px; vertical-align:middle;"></a>0000-0001-5274-5037</h3>
+* **Nav Mustafee** <a href="https://orcid.org/0000-0002-2204-8924" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="height:30px; margin-left:15px; margin-right:6px; margin-top:-5px; margin-bottom:-5px; vertical-align:middle;"></a>0000-0002-2204-8924</h3>
+* **Andy Mayne** <a href="https://orcid.org/0000-0003-1263-2286" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="height:30px; margin-left:15px; margin-right:6px; margin-top:-5px; margin-bottom:-5px; vertical-align:middle;"></a>0000-0003-1263-2286</h3>
+
+:::
+
+::: {.column width='50%'}
 
 Thanks to the **authors** who made their code available under open licences, facilitating this research.
 
 This project is supported by the Medical Research Council [grant number MR/Z503915/1].
+
+:::
+
+::::
 
 :::: {.columns}
 
 ::: {.column width='50%'}
 
 <p align="center">
-  ![](images/exeter.png){width=400}
-  ![](images/or_society.png){width=400}
+  <img src="images/exeter.png" alt="University of Exeter" style="width:380px; margin-top:-40px; margin-bottom:-20px;">
+  <img src="images/or_society.png" alt="The OR Society" style="width:380px; margin-top:-20px; margin-bottom:-20px;">
 </p>
 
 :::
@@ -513,8 +557,8 @@ This project is supported by the Medical Research Council [grant number MR/Z5039
 
 <p align="center">
   <br>
-  ![](images/hdr_uk.png){width=350}
-  ![](images/nhs_somerset.png){width=400}
+  <img src="images/hdr_uk.png" alt="HDR UK" style="width:330px; margin-top:-20px; margin-bottom:-40px;">
+  <img src="images/nhs_somerset.png" alt="Somerset NHS Foundation Trust" style="width:380px; margin-top:-20px; margin-bottom:-20px;">
 </p>
 
 :::

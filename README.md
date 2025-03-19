@@ -1,6 +1,7 @@
 # GW4 prize presentation
 
 [![ORCID: Heather](https://img.shields.io/badge/ORCID-0000--0002--6596--3479-brightgreen)](https://orcid.org/0000-0002-6596-3479)
+[![GitHub pages](https://github.com/pythonhealthdatascience//gw4_prize_presentation/actions/workflows/quarto_publish.yaml/badge.svg)](https://github.com/pythonhealthdatascience//gw4_prize_presentation/actions/workflows/quarto_publish.yaml)
 
 Amy Heather's presentation for the GW4 Open Research Prize 2024/25 (Improving Quality category).
 
