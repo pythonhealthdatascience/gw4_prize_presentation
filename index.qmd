@@ -157,22 +157,120 @@ fig.show()
 
 ## Why does reproducibility matter?
 
+:::: {.columns}
+
+::: {.column width='50%' .fragment fragment-index=1}
+
+<p align="center">
+  For other modellers...
+</p>
+
+:::
+
+::: {.column width='50%' .fragment fragment-index=4}
+
+<p align="center">
+  For modeller...
+</p>
+
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width='25%' .fragment fragment-index=2}
+
+<p align="center">
+  ![](images/partner-handshake-icon.png){width=200}<br>
+  Trust
+</p>
+
+:::
+
+::: {.column width='25%' .fragment fragment-index=3}
+
+<p align="center">
+  ![](images/recycle-sign-arrow-icon.png){width=200}<br>
+  Reuse
+</p>
+
+:::
+
+::: {.column width='25%' .fragment fragment-index=5}
+
+<p align="center">
+  ![](images/recycle-sign-arrow-icon.png){width=200}<br>
+  Reuse
+</p>
+
+:::
+
+::: {.column width='25%' .fragment fragment-index=6}
+
+<p align="center">
+  ![](images/quality-badge-checkmark-icon.png){width=200}<br>
+  Quality
+</p>
+
+:::
+
+::::
+
 <!--
-
 * re run and verify findings
-* support model reuse
-* maintaing trust in outputs
-* others build on prior work
-* researcher revist and build on own analyses
 
+* maintaing trust in outputs
+* support model reuse
+* others build on prior work
+Achieving reproducibility fosters trust and transparency, building confidence that the model behaves consistently with the original implementation. It is vital to establish reproducibility before a model is reused.
+
+* researcher revisit and build on own analyses
+Reproducibility also benefits authors by making it easier to revisit and reuse their own code, such as for updating outputs or conducting new analyses.
+
+Finally, reproducibility often improves overall code quality. It encourages clear structure and documentation, reducing errors and ambiguities. [7] These advantages apply regardless of whether code is shared publicly or remains proprietary.
+-->
+
+<br>
+
+:::: {.columns}
+
+::: {.column width='45%' .fragment}
+
+Reasons for non-reproducility include:
+
+* Missing code
+* Lost parameters
+* Software changes
+
+Troubleshooting **time-consuming** and maybe **impossible** if information is lost.
+
+:::
+
+<!--
 Issues could be missing code, lost parameters, changes in software behaviour
 troubleshooting time consuming and maybe impossible if info lost
 
 Common barrier: preception that requires advanced skills and time to make reproducible
+--->
 
-**Research aim:** Generate a set of actionable recommendations to improve reproducibility of healthcare simulation models.
+::: {.column width='5%'}
+:::
 
--->
+::: {.column width='50%'}
+
+::: {.my-callout .fragment}
+::: {.my-callout-header}
+Research aim:
+:::
+::: {.my-callout-container}
+Generate a set of actionable recommendations to improve reproducibility of healthcare simulation models.
+:::
+:::
+
+:::
+
+::::
 
 ## Protocol
 
@@ -224,11 +322,16 @@ And know that is good - how we wrote ours, it was very useful, the ones that sha
 
 <!-- Notes:
 
-When the papers used had licence that allows reuse of paper artefacts, could show side by side
+Ensure consistent and transparent workflow
 
+And also, to make life easier
 -->
 
-## GitHub website for each study
+## {#study-websites fullscreen=true}
+
+<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_report.html"></iframe> 
+
+<!-- Show:
 
 Options (reproduced + have side by side):
 
@@ -238,11 +341,12 @@ https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/re
 
 https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_report.html
 
-<!-- Show:
-
 SUMMARY - compare figure, compare table, mention that it was with consensus subjective decision allowing for some variation
+When the papers used had licence that allows reuse of paper artefacts, could show side by side
 
 LOGBOOK
+Throughout the process, I maintained detailed logbooks inspired by Ayllón et al. (2021)’s TRACE modelling notebooks, documenting time spent, actions taken, successes, failures, and every stage—from setting up environments to generating figures.
+(e.g. Kim Day 3)
 
 -->
 
@@ -288,29 +392,131 @@ mention using FOSS to make diagrams, SVG
 and the Improving Quality aims and how the work itself is very relevant
 -->
 
-## {#preprint fullscreen=true}
+## Preprint
 
 <p align="center">
   <img src="images/preprint.png"/>
 </p>
 
-## Current / future work
-
-<!-- 
-
-STARS logo again? Or maybe just focus on stuff...
+<!-- Notes:
 
 -->
 
+## Ongoing / future work
 
-## Thanks acknowledgements
+::: {.scroll-container style="overflow-y: scroll; height: 700px;"}
+<p align="center">
+  ![](images/python_template.png)
+</p>
+:::
+
+<!-- Notes:
+
+Developing reproducible template models: I am currently creating template DES models in Python and R, hosted on GitHub, that follow a reproducible analytical pipeline (RAP). This approach, widely used in fields like public health and government analytics, ensures that analyses are scripted, version-controlled, and reproducible from raw data to final outputs. These templates will implement the recommendations from my findings - as well as the Levels of RAP framework developed by the NHS RAP Community of Practice. They will serve as practical examples to lower the barrier to entry for conducting reproducible DES research and provide a clear, replicable structure for others to follow.
+
+-->
+
+## Ongoing / future work
+
+:::: {.columns}
+
+::: {.column width='20%'}
+
+**Re-runnable**
+
+Code runs
+
+:::
+
+::: {.column width='20%'}
+
+**Repeatable**
+
+Code can produce the same results more than once
+
+:::
+
+::: {.column width='20%'}
+
+**Reproducible**
+
+Running code regenerates the published results
+
+<br>
+
+This work
+
+:::
+
+::: {.column width='20%'}
+
+**Reusable**
+
+Code can be adapted and used in new contexts
+
+<br>
+
+STARS ^[Monks, T., Harper, A., & Mustafee, N. (2024). Towards sharing tools and artefacts for reusable simulations in healthcare. Journal of Simulation, 1–20. [10.1080/17477778.2024.2347882](https://doi.org/10.1080/17477778.2024.2347882)]
+
+:::
+
+::: {.column width='20%'}
+
+**Replicable**
+
+New code based on described methods produces consistent results
+
+<br>
+
+STRESS ^[Monks, T., Currie, C., Onggo, B., et al. (2019). Strengthening the reporting of empirical simulation studies: Introducing the STRESS guidelines. Journal of Simulation, 13(1), 55–67. [10.1080/17477778.2018.1442155](https://doi.org/10.1080/17477778.2018.1442155)]
+
+:::
+
+::::
+<!-- This empirical work is part of larger project... Complements previous work (lined under each relevant heading, with citations)-->
+
+::: {.incremental}
+
+* Refining existing frameworks.
+* Working with journals "Simulation" and "Journal of Simulation".
+* Developing training materials with HDR UK.
+
+:::
 
 <!-- 
-Logos of all related companies in bid
+2. Refining the STARS framework: The team I am part of previously developed the Sharing Tools and Artefacts for Reusable Simulations (STARS) framework, which provides guidelines for ensuring DES model reusability. Whilst STARS supports reuse, my work found it did not also ensure computational reproducibility. My findings will contribute to refining the framework to better address the practical challenges of reproducing healthcare DES models.
+
+3. Improving the STRESS-DES framework: My supervisor developed the Strengthening the reporting of empirical simulation studies-DES (STRESS-DES) guidelines. These aim to facilitate replicability by enabling model reconstruction from a paper's description without requiring code. In my work, I found that adherence to the guidelines did not also translate to reproducibility. My findings will inform refinements to STRESS-DES that help incorporate practices necessary for computational reproducibility. Given its widespread adoption in healthcare modelling, these improvements will enhance the clarity and reproducibility of future studies following the STRESS-DES framework.
+-->
+
+
+## Acknowledgements
+
+Thanks to **Tom Monks**, **Alison Harper**, **Nav Mustafee**, and **Andy Mayne**, for their supervision, support, and involvement.
+
+Thanks to the **authors** who made their code available under open licences, facilitating this research.
 
 This project is supported by the Medical Research Council [grant number MR/Z503915/1].
 
-Shout outs to everyone team
+:::: {.columns}
 
-Also to authors of papers used in this study for sharing their work openly, facilliating the work
---->
+::: {.column width='50%'}
+
+<p align="center">
+  ![](images/exeter.png){width=400}
+  ![](images/or_society.png){width=400}
+</p>
+
+:::
+
+::: {.column width='50%'}
+
+<p align="center">
+  <br>
+  ![](images/hdr_uk.png){width=350}
+  ![](images/nhs_somerset.png){width=400}
+</p>
+
+:::
+
+::::

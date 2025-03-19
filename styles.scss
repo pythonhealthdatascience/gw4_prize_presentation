@@ -8,3 +8,30 @@ $mainFont: 'Jost', sans-serif;
 $mainFontSize: 30px;
 $headingColor: #002147;
 $mainColor: #002147;
+
+.my-callout {
+  margin: 1em 0;
+  border: 2px solid gray;
+  border-left: 10px solid #002147;
+  border-radius: 10px;
+}
+
+.my-callout-header {
+  margin-left: 0em;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 0.1em;
+  color: black;
+  background-color: #A4D4FF;
+  border-top-right-radius: 10px;
+  font-weight: bold;
+}
+
+.my-callout-container {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 0.1em;
+  color: black;
+  background-color: #D7ECFF;
+  border-bottom-right-radius: 10px;
+}
