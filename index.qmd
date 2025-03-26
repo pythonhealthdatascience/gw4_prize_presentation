@@ -35,25 +35,17 @@ Part of the "STARS" project:
 
 ![](images/stars_banner.png)
 
-## Discrete event simulation
+## Discrete event simulation (DES)
 
 <p align="center">
   <img src="images/simple_des.gif"/>
 </p>
 
-<div style="text-align: center; font-size: 0.6em">
+<div style="text-align: center; font-size: 0.8em">
 Animation created using web app developed by <strong>Sammi Rosser</strong> <a href="https://orcid.org/0000-0002-9552-8988" aria-label="View ORCID record"><img src="images/orcid.png" alt="ORCID iD" style="width:16px; margin-left:6px; margin-right:6px; vertical-align:middle;"></a>0000-0002-9552-8988
 <br>
 Available at <img src="images/GitHub_Invertocat_Dark.png" alt="GitHub" style="width:16px; height:16px; margin-left:6px; vertical-align:middle;"> [hsma-programme/Teaching_DES_Concepts_Streamlit](https://github.com/hsma-programme/Teaching_DES_Concepts_Streamlit) (2024) (MIT Licence).
 </div>
-
-<!-- Notes:
-
-* Project focused on discrete event simulation
-* Explain how it works
-* Python + R
-
--->
 
 ## Sharing simulation models
 
@@ -217,20 +209,6 @@ fig.show()
 
 ::::
 
-<!--
-* re run and verify findings
-
-* maintaing trust in outputs
-* support model reuse
-* others build on prior work
-Achieving reproducibility fosters trust and transparency, building confidence that the model behaves consistently with the original implementation. It is vital to establish reproducibility before a model is reused.
-
-* researcher revisit and build on own analyses
-Reproducibility also benefits authors by making it easier to revisit and reuse their own code, such as for updating outputs or conducting new analyses.
-
-Finally, reproducibility often improves overall code quality. It encourages clear structure and documentation, reducing errors and ambiguities. [7] These advantages apply regardless of whether code is shared publicly or remains proprietary.
--->
-
 <br>
 
 :::: {.columns}
@@ -246,13 +224,6 @@ Reasons for non-reproducility include:
 Troubleshooting **time-consuming** and maybe **impossible** if information is lost.
 
 :::
-
-<!--
-Issues could be missing code, lost parameters, changes in software behaviour
-troubleshooting time consuming and maybe impossible if info lost
-
-Common barrier: preception that requires advanced skills and time to make reproducible
---->
 
 ::: {.column width='5%'}
 :::
@@ -278,18 +249,6 @@ Generate a set of actionable recommendations to improve reproducibility of healt
   <img src="images/stars_wp1_workflow.png"/>
 </p>
 
-<!-- Notes
-
-To do this, attempted to reproduce eight published DES studies
-python and R
-mix complexities locations focuses etc
-
-Barriers and facilitators experienced from those attempts
-As well as results from evaluating the articles against reporting guidelines and code against eg. journal badge requiremetns stars
-
-to form recommendations
--->
-
 ## Pre-registration
 
 ::: {.scroll-container style="overflow-y: scroll; height: 700px;"}
@@ -299,16 +258,6 @@ to form recommendations
 </p>
 
 :::
-
-<!-- Notes:
-
-Shared link with study authors
-
-Others can use and benefit from it - X number of downloads
-
-And know that is good - how we wrote ours, it was very useful, the ones that shared full protocols
-
--->
 
 ## GitHub template
 
@@ -320,49 +269,13 @@ And know that is good - how we wrote ours, it was very useful, the ones that sha
 
 :::
 
-<!-- Notes:
-
-Ensure consistent and transparent workflow
-
-And also, to make life easier
--->
-
 ## {#study-websites fullscreen=true}
 
 <iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_report.html"></iframe> 
 
-<!-- Show:
-
-Options (reproduced + have side by side):
-
-https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reproduction_report.html
-
-https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reproduction_report.html
-
-https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_report.html
-
-SUMMARY - compare figure, compare table, mention that it was with consensus subjective decision allowing for some variation
-When the papers used had licence that allows reuse of paper artefacts, could show side by side
-
-LOGBOOK
-Throughout the process, I maintained detailed logbooks inspired by Ayllón et al. (2021)’s TRACE modelling notebooks, documenting time spent, actions taken, successes, failures, and every stage—from setting up environments to generating figures.
-(e.g. Kim Day 3)
-
--->
-
 ## {#summary-website fullscreen=true}
 
-<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary/pages/reproduction.html"></iframe> 
-
-<!-- Show:
-
-INTERACTIVE FIGURE - with timings
-
-GitHub repo homepage - README - all the items from publication
-or just the example of non interactuve publication figure
-
-the reflections from reproductions page
--->
+<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary"></iframe> 
 
 ## Recommendations
 
@@ -382,25 +295,11 @@ the reflections from reproductions page
 
 ::::
 
-<!--
-
-Touching on some of the resutls
-Highlight some of the key thigns
-
-mention using FOSS to make diagrams, SVG
-
-and the Improving Quality aims and how the work itself is very relevant
--->
-
 ## Preprint
 
 <p align="center">
   <img src="images/preprint.png"/>
 </p>
-
-<!-- Notes:
-
--->
 
 ## Ongoing / future work
 
@@ -409,12 +308,6 @@ and the Improving Quality aims and how the work itself is very relevant
   ![](images/python_template.png)
 </p>
 :::
-
-<!-- Notes:
-
-Developing reproducible template models: I am currently creating template DES models in Python and R, hosted on GitHub, that follow a reproducible analytical pipeline (RAP). This approach, widely used in fields like public health and government analytics, ensures that analyses are scripted, version-controlled, and reproducible from raw data to final outputs. These templates will implement the recommendations from my findings - as well as the Levels of RAP framework developed by the NHS RAP Community of Practice. They will serve as practical examples to lower the barrier to entry for conducting reproducible DES research and provide a clear, replicable structure for others to follow.
-
--->
 
 ## Ongoing / future work
 
@@ -500,7 +393,6 @@ New code based on described methods produces consistent results
 :::
 
 ::::
-<!-- This empirical work is part of larger project... Complements previous work (lined under each relevant heading, with citations)-->
 
 ::: {.incremental}
 
@@ -509,13 +401,6 @@ New code based on described methods produces consistent results
 * Developing training materials with HDR UK.
 
 :::
-
-<!-- 
-2. Refining the STARS framework: The team I am part of previously developed the Sharing Tools and Artefacts for Reusable Simulations (STARS) framework, which provides guidelines for ensuring DES model reusability. Whilst STARS supports reuse, my work found it did not also ensure computational reproducibility. My findings will contribute to refining the framework to better address the practical challenges of reproducing healthcare DES models.
-
-3. Improving the STRESS-DES framework: My supervisor developed the Strengthening the reporting of empirical simulation studies-DES (STRESS-DES) guidelines. These aim to facilitate replicability by enabling model reconstruction from a paper's description without requiring code. In my work, I found that adherence to the guidelines did not also translate to reproducibility. My findings will inform refinements to STRESS-DES that help incorporate practices necessary for computational reproducibility. Given its widespread adoption in healthcare modelling, these improvements will enhance the clarity and reproducibility of future studies following the STRESS-DES framework.
--->
-
 
 ## Acknowledgements
 
