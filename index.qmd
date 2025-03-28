@@ -49,18 +49,11 @@ Available at <img src="images/GitHub_Invertocat_Dark.png" alt="GitHub" style="wi
 
 ## Sharing simulation models
 
-Nine out of ten healthcare DES publications do not share the code for their model. ^[Monks, T., & Harper, A. (2023). Computer model and code sharing practices in healthcare discrete-event simulation: a systematic scoping review. Journal of Simulation, 0(0), 1-16. [10.1080/17477778.2023.2260772](https://
-doi.org/10.1080/17477778.2023.2260772)]
-
-. . .
-
-Models that are shared may not be reproducible. <!-- Making code open does not mean it is reproducible -->
-
-. . .
-
 <br>
 
 **Reproducibility**: Generating reported results using the provided code and data.
+
+<br>
 
 :::: {.columns style='display: flex;'}
 
@@ -275,7 +268,7 @@ Generate a set of actionable recommendations to improve reproducibility of healt
 
 ## {#summary-website fullscreen=true}
 
-<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary"></iframe> 
+<iframe class="stretch" data-src="https://pythonhealthdatascience.github.io/stars_wp1_summary/pages/reflections.html"></iframe> 
 
 ## Recommendations
 
@@ -396,7 +389,6 @@ New code based on described methods produces consistent results
 
 ::: {.incremental}
 
-* Refining existing frameworks.
 * Working with journals "Simulation" and "Journal of Simulation".
 * Developing training materials with HDR UK.
 
