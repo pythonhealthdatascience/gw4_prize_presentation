@@ -50,6 +50,10 @@ If you wish to cite this presentation, please refer to the `CITATION.cff`. As an
 
 > Heather, A. (2025). Improving Reproducibility in Open Healthcare Simulation. Presentation for the GW4 Open Research Prize 2024/25 Improving Quality. https://github.com/pythonhealthdatascience/gw4_prize_presentation.
 
+You can also cite the archived version of this repository on Zenodo:
+
+> TBC.
+
 <br>
 
 ## 💰 Funding
