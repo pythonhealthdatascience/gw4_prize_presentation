@@ -2,6 +2,7 @@
 
 [![ORCID: Heather](https://img.shields.io/badge/ORCID-0000--0002--6596--3479-brightgreen)](https://orcid.org/0000-0002-6596-3479)
 [![GitHub pages](https://github.com/pythonhealthdatascience//gw4_prize_presentation/actions/workflows/quarto_publish.yaml/badge.svg)](https://github.com/pythonhealthdatascience//gw4_prize_presentation/actions/workflows/quarto_publish.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15101780.svg)](https://doi.org/10.5281/zenodo.15101780)
 
 Amy Heather's presentation for the GW4 Open Research Prize 2024/25 (Improving Quality category).
 
@@ -52,7 +53,7 @@ If you wish to cite this presentation, please refer to the `CITATION.cff`. As an
 
 You can also cite the archived version of this repository on Zenodo:
 
-> TBC.
+> Heather, A. (2025). Improving Reproducibility in Open Healthcare Simulation. Zenodo. https://doi.org/10.5281/zenodo.15101780.
 
 <br>
 
